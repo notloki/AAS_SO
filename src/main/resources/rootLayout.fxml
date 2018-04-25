@@ -7,12 +7,15 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -25,15 +28,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox accessibleRole="TOOLTIP" alignment="TOP_CENTER" cache="true" cacheHint="SCALE_AND_ROTATE" depthTest="ENABLE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" spacing="10.0" styleClass="root" stylesheets="@general.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.notloki.aas_so.Controller">
+<VBox accessibleRole="TOOLTIP" alignment="TOP_CENTER" cache="true" cacheHint="SCALE_AND_ROTATE" depthTest="ENABLE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1100.0" spacing="10.0" styleClass="root" stylesheets="@general.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.notloki.aas_so.Controller">
 
 
 
    <padding>
-      <Insets left="10.0" right="10.0" top="10.0" />
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
    <cursor>
-      <Cursor fx:constant="NONE" />
+      <Cursor fx:constant="DEFAULT" />
    </cursor>
    <children>
       <HBox alignment="CENTER">
@@ -76,343 +79,365 @@
           </Menu>
         </menus>
       </MenuBar>
-      <GridPane alignment="TOP_CENTER" hgap="10.0" vgap="5.0" VBox.vgrow="SOMETIMES">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <TabPane VBox.vgrow="SOMETIMES">
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
-         <children>
-            <VBox alignment="TOP_CENTER">
-               <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="CONTRACTOR NAME:" textAlignment="CENTER" VBox.vgrow="ALWAYS">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER" layoutX="10.0" layoutY="47.0">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="10.0" text="OWNER NAME:" textAlignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER" layoutX="10.0" layoutY="84.0">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="67.0" text="ADDRESS:" textAlignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER" layoutX="10.0" layoutY="121.0">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Separator prefWidth="200.0" />
-               </children>
-            </VBox>
-            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" GridPane.columnIndex="1">
-               <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="DATE:" textAlignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="10.0" text="CITY/STATE" textAlignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </TextField>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="67.0" text="ORDERED BY:" textAlignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <padding>
-                        <Insets top="5.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <TextField alignment="CENTER" layoutX="10.0" layoutY="121.0">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Separator layoutX="10.0" layoutY="167.0" prefWidth="200.0" />
-               </children>
-            </VBox>
-            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" GridPane.columnIndex="2">
-               <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="OWNER PHONE #" textAlignment="CENTER" VBox.vgrow="ALWAYS">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER" layoutX="10.0" layoutY="84.0">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="67.0" text="ZIP CODE:" textAlignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER" layoutX="10.0" layoutY="121.0">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="10.0" text="PO NUMBER:" textAlignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER" layoutX="10.0" layoutY="26.0">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="5.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Separator prefWidth="200.0" />
-               </children>
-            </VBox>
-            <VBox alignment="TOP_CENTER" layoutX="590.0" layoutY="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="SPECIAL ORDER #:" textAlignment="CENTER" VBox.vgrow="ALWAYS">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER" layoutX="10.0" layoutY="47.0">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="10.0" text="SHIP TO:" textAlignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <ComboBox fx:id="shipTo" prefWidth="200">
-                      <items>
-                          <FXCollections fx:factory="observableArrayList">
-                              <String fx:value="YARD" />
-                              <String fx:value="JOB SITE" />
-                          </FXCollections>
-                      </items>
-                      <value>
-                          <String fx:value="YARD" />
-                      </value>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </ComboBox>
-
-
-
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="67.0" text="COIL STOCK # FOR OFFICIAL USE" textAlignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER" layoutX="10.0" layoutY="121.0">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-               </children>
-            </VBox>
-            <SplitPane dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <items>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <tabs>
+            <Tab text="Customer Info">
+               <content>
+                  <GridPane alignment="CENTER" hgap="10.0" styleClass="rootGridPane" vgap="5.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
                      <children>
-                        <VBox layoutX="18.0" prefHeight="200.0" prefWidth="136.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <VBox alignment="TOP_CENTER">
                            <children>
-                              <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="29GA EAGLE PRO" textAlignment="CENTER">
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="CONTRACTOR NAME:" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField alignment="CENTER" layoutX="10.0" layoutY="47.0">
                                  <padding>
-                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
-                              </CheckBox>
-                              <CheckBox contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="GALVALUME" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="10.0" text="OWNER NAME:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField alignment="CENTER" layoutX="10.0" layoutY="84.0">
                                  <padding>
-                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="67.0" text="ADDRESS:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField alignment="CENTER" layoutX="10.0" layoutY="121.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="DATE:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField alignment="CENTER">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="10.0" text="CITY/STATE" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField alignment="CENTER">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="67.0" text="ORDERED BY:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
                                  </padding>
                                  <VBox.margin>
-                                    <Insets />
+                                    <Insets top="5.0" />
                                  </VBox.margin>
-                              </CheckBox>
-                              <CheckBox alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="20.0" layoutY="47.0" mnemonicParsing="false" text="G100(WHITE ONLY)" textAlignment="CENTER">
+                              </Label>
+                              <TextField alignment="CENTER" layoutX="10.0" layoutY="121.0">
                                  <padding>
-                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
-                              </CheckBox>
-                              <CheckBox alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="10.0" layoutY="84.0" mnemonicParsing="false" text="LINER WHITE" textAlignment="CENTER">
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" top="10.0" />
-                                 </padding>
-                              </CheckBox>
-                              <CheckBox alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="10.0" layoutY="121.0" mnemonicParsing="false" text="DRIP STOP" textAlignment="CENTER">
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" top="10.0" />
-                                 </padding>
-                              </CheckBox>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Separator layoutX="10.0" layoutY="167.0" prefWidth="200.0" />
                            </children>
                         </VBox>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <VBox layoutY="14.0" prefHeight="186.0" prefWidth="124.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" GridPane.columnIndex="2">
                            <children>
-                              <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Special Instructions:" scrollLeft="5.0" scrollTop="5.0" wrapText="true" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="OWNER PHONE #" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField alignment="CENTER" layoutX="10.0" layoutY="84.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="67.0" text="ZIP CODE:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField alignment="CENTER" layoutX="10.0" layoutY="121.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="10.0" text="PO NUMBER:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField alignment="CENTER" layoutX="10.0" layoutY="26.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Separator prefWidth="200.0" />
                            </children>
                         </VBox>
+                        <VBox alignment="TOP_CENTER" layoutX="590.0" layoutY="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="SPECIAL ORDER #:" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField alignment="CENTER" layoutX="10.0" layoutY="47.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="10.0" text="SHIP TO:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="shipTo" prefWidth="200">
+                                  <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                          <String fx:value="YARD" />
+                                          <String fx:value="JOB SITE" />
+                                      </FXCollections>
+                                  </items>
+                                  <value>
+                                      <String fx:value="YARD" />
+                                  </value>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+            
+            
+            
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="67.0" text="COIL STOCK # FOR OFFICIAL USE" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField alignment="CENTER" layoutX="10.0" layoutY="121.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" layoutX="299.0" layoutY="10.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="DATE:" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker prefHeight="28.0" prefWidth="342.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin></DatePicker>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="10.0" text="CITY/STATE" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField alignment="CENTER" layoutX="10.0" layoutY="84.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="67.0" text="ORDERED BY:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField alignment="CENTER" layoutX="10.0" layoutY="121.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                        <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <SplitPane dividerPositions="0.5">
+                                 <items>
+                                    <AnchorPane>
+                                       <children>
+                                          <VBox layoutX="18.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="29GA EAGLE PRO" textAlignment="CENTER">
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" top="10.0" />
+                                                   </padding>
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="GALVALUME" textAlignment="CENTER">
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" top="10.0" />
+                                                   </padding>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </CheckBox>
+                                                <CheckBox alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="20.0" layoutY="47.0" mnemonicParsing="false" text="G100(WHITE ONLY)" textAlignment="CENTER">
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" top="10.0" />
+                                                   </padding>
+                                                </CheckBox>
+                                                <CheckBox alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="10.0" layoutY="84.0" mnemonicParsing="false" text="LINER WHITE" textAlignment="CENTER">
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" top="10.0" />
+                                                   </padding>
+                                                </CheckBox>
+                                                <CheckBox alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="10.0" layoutY="121.0" mnemonicParsing="false" text="DRIP STOP" textAlignment="CENTER">
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" top="10.0" />
+                                                   </padding>
+                                                </CheckBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane>
+                                       <children>
+                                          <VBox layoutY="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <TextArea promptText="Special Instructions:" scrollLeft="5.0" scrollTop="5.0" wrapText="true" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </VBox>
                      </children>
-                  </AnchorPane>
-               </items>
-            </SplitPane>
-            <VBox alignment="TOP_CENTER" layoutX="299.0" layoutY="10.0" GridPane.rowIndex="1">
-               <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="DATE:" textAlignment="CENTER" VBox.vgrow="ALWAYS">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER" layoutX="10.0" layoutY="47.0">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="10.0" text="CITY/STATE" textAlignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER" layoutX="10.0" layoutY="84.0">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="67.0" text="ORDERED BY:" textAlignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField alignment="CENTER" layoutX="10.0" layoutY="121.0">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </TextField>
-               </children>
-            </VBox>
-         </children>
-      </GridPane>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab text="Steel Panels">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Steel Acc.">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
    </children>
 </VBox>

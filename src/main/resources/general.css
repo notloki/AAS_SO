@@ -10,6 +10,7 @@
     -fx-font-size: 14px;
 
 
+
     }
 .header {
     -fx-background-color: lightskyblue;
@@ -42,4 +43,30 @@
     -fx-padding: 5;
 
 }
+.tab-header-background
+{
+    -fx-background-color: aliceblue;
 
+}
+.tab-pane
+{
+    -fx-border-color: lightgrey;
+    -fx-border-insets: 4;
+}
+
+.rootGridPane
+{
+    -fx-padding: 10 5 5 5;
+}
+.tab
+{
+    -fx-background-color: aliceblue;
+    -fx-border-color: lightskyblue;
+    -fx-border-width: 2;
+}
+.tab:selected
+{
+    -fx-background-color: lightskyblue;
+    -fx-border-color: aliceblue;
+    -fx-border-width: 2;
+}
