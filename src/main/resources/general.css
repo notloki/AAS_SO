@@ -1,0 +1,45 @@
+.root {
+    -fx-border-color: red;
+    -fx-border-width: 2;
+    -fx-background-color: aliceblue;
+    }
+.text-field {
+    -fx-border-color: lightskyblue;
+    -fx-background-image: url(loki.jpg);
+    -fx-font-family: "arial";
+    -fx-font-size: 14px;
+
+
+    }
+.header {
+    -fx-background-color: lightskyblue;
+    }
+
+
+.label
+{
+    -fx-font-family: "arial";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+.split-pane .split-pane-divider
+{
+    -fx-border-color: lightskyblue;
+}
+
+.headerTitle
+{
+    -fx-font-family: "arial";
+    -fx-font-size: 28px;
+    -fx-font-weight: bolder;
+}
+.date-picker
+{
+    -fx-alignment: CENTER;
+    -fx-font-family: "arial";
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+
+}
+
