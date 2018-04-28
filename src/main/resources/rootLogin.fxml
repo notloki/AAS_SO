@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="root" stylesheets="@rootLogin.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.notloki.aas_so.Controller">
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="400.0">
+         <children>
+            <AnchorPane layoutY="14.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Sign in" AnchorPane.topAnchor="75.0">
+                     <font>
+                        <Font name="Lucida Sans Demibold" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="WHITE" height="50.65" radius="26.307499999999997" spread="0.72" width="56.58" />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="44.0" text="with your All American Email" textFill="WHITE" AnchorPane.topAnchor="100.0">
+                     <font>
+                        <Font name="Lucida Sans Regular" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="53.62" radius="26.31" spread="0.77" width="53.62" />
+                     </effect>
+                  </Label>
+                  <Label layoutY="55.0" text="Email Address" textFill="WHITE" AnchorPane.topAnchor="180.0">
+                     <effect>
+                        <DropShadow height="31.38" radius="17.0425" spread="0.74" width="38.79" />
+                     </effect></Label>
+                  <TextField layoutY="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="220.0">
+                     <opaqueInsets>
+                        <Insets top="1.0" />
+                     </opaqueInsets>
+                     <effect>
+                        <DropShadow height="29.9" radius="13.7075" spread="0.23" width="26.93">
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                  </TextField>
+                  <Button cache="true" cacheHint="SCALE_AND_ROTATE" layoutX="348.0" layoutY="353.0" mnemonicParsing="false" text="NEXT" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="450.0">
+                     <effect>
+                        <InnerShadow choke="0.3" color="#ffffff00" height="155.13" radius="78.31" width="160.11">
+                           <input>
+                              <DropShadow color="#29537c" height="181.48" radius="93.85499999999999" spread="0.64" width="195.94" />
+                           </input>
+                        </InnerShadow>
+                     </effect>
+                  </Button>
+                  <Separator layoutX="100.0" layoutY="249.0" minHeight="-Infinity" prefHeight="10.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="249.0">
+                     <effect>
+                        <DropShadow height="44.72" radius="24.085" spread="0.54" width="53.62" />
+                     </effect>
+                  </Separator>
+                  <Button layoutX="-12.0" layoutY="461.0" mnemonicParsing="false" text="Button" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="450.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.2" color="WHITE" height="86.23" radius="34.4625" width="53.62">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="36.0" prefWidth="200.0" />
+   </top>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="40.0" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="40.0" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="48.0" prefWidth="200.0" />
+   </bottom>
+</BorderPane>

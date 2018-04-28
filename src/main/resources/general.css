@@ -2,6 +2,7 @@
     -fx-border-color: red;
     -fx-border-width: 2;
     -fx-background-color: aliceblue;
+    -fx-color: aliceblue;
     }
 .text-field {
     -fx-border-color: lightskyblue;
@@ -24,10 +25,23 @@
     -fx-font-weight: bold;
     -fx-text-alignment: center;
 }
-.split-pane .split-pane-divider
+
+
+.split-pane
 {
-    -fx-border-color: lightskyblue;
+    -fx-background-color: aliceblue;
 }
+
+.split-pane:vertical .split-pane-divider
+{
+    -fx-border-color: black;
+    -fx-background-color: red;
+}
+
+
+
+
+
 
 .headerTitle
 {
@@ -70,3 +84,5 @@
     -fx-border-color: aliceblue;
     -fx-border-width: 2;
 }
+
+
